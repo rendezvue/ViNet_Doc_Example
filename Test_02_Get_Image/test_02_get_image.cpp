@@ -24,9 +24,8 @@ int main(void)
 			
 			//Get Source Image
 			cla_api.Ensemble_Camera_Capture_SW_Trigger() ;		//New Image
-            //cla_api.Ensemble_Source_Get_Image(IMAGE_ADD_TIME+IMAGE_ADD_SOURCE_INFO, &image) ;
-            cla_api.Ensemble_Source_Get_Image(0, &image) ;
-
+            cla_api.Ensemble_Source_Get_Image(IMAGE_ADD_TIME+IMAGE_ADD_SOURCE_INFO, &image) ;
+            
 			cv::Mat mat_image ;
 			if( image.p_buf != NULL )
             {
